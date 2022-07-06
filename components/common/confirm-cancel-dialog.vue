@@ -21,10 +21,11 @@
 </template>
 <script lang="ts">
 import { Vue, Component, Prop, Watch } from "nuxt-property-decorator";
-import { UIModal, UIButton } from "@edvoy-ui/edvoy-ui";
 
 @Component({
-  components: { UIModal, UIButton },
+  components: {
+    //  UIModal, UIButton
+  },
 })
 export default class ConfirmCancelDialog extends Vue {
   @Prop({ type: Object, default: null })

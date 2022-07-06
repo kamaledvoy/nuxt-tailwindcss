@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu />
+    <AlertBox />
     <div class="flex items-center justify-center min-h-screen">
       <div class="max-w-lg p-6 shadow-lg drop-shadow-md shadow-green-500/50">
         <h2
@@ -31,10 +31,10 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
-import MenuComp from "~/components/menu-comp.vue";
+import AlertBox from "~/components/common/alert-box.vue";
 
 @Component({
-  components: { MenuComp },
+  components: { AlertBox },
 })
 export default class Home extends Vue {}
 </script>
