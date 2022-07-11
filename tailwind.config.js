@@ -50,10 +50,6 @@ module.exports = {
       fontSize: {
         xxs: "0.6875rem",
       },
-      fontFamily: {
-        Poppins: ["Poppins", "sans-serif"],
-        Inter: ["Inter", "sans-serif"],
-      },
     },
   },
   plugins: [],
