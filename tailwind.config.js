@@ -16,7 +16,7 @@ module.exports = {
   ],
   // https://tailwindcss.com/docs/preflight
   corePlugins: {
-    preflight: false,
+    preflight: true,
   },
   theme: {
     extend: {

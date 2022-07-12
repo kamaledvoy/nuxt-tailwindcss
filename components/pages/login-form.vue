@@ -13,7 +13,7 @@
           <input
             v-model="email"
             type="email"
-            class="w-full h-12 px-2 border border-gray-500 rounded-md outline-none"
+            class=""
             placeholder="email address"
             required
             name="email"
@@ -59,11 +59,16 @@ export default class LoginFormComponent extends Vue {
 .form-group {
   @apply w-full h-full relative inline-flex;
   label {
-    transition: 0.5s;
-    @apply absolute z-0 top-0 left-0 w-full h-full py-3 px-5 text-base font-normal  pointer-events-none;
+    transition: 0.3s;
+    border-radius: 4px;
+    cursor: text;
+    @apply absolute z-0 top-0 left-0 w-full h-full py-3.5 px-3 text-base font-normal pointer-events-none border;
   }
   input {
-    @apply text-base font-normal relative leading-none;
+    border-radius: 4px;
+    margin: 1px 1px 0 1px;
+    @apply text-base font-normal relative leading-none
+      w-full h-full px-3 py-3 border-2 border-transparent outline-none;
     &::placeholder {
       color: white;
     }
@@ -73,14 +78,14 @@ export default class LoginFormComponent extends Vue {
       &::placeholder {
         @apply text-gray-500;
       }
-      @apply border-blue-600;
+      @apply border-blue-600 border-2;
     }
   }
   input:hover ~ label,
   input:focus ~ label,
   input:focus-visible ~ label,
   input:valid ~ label {
-    @apply -top-1.5 left-4 bg-white text-sm px-1 py-0 w-fit h-auto leading-3;
+    @apply -top-1.5 left-3 bg-white text-sm font-normal text-blue-600 px-1.5  py-0 w-fit h-auto leading-3 border-transparent;
   }
 }
 </style>
