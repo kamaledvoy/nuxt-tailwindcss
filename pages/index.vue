@@ -26,15 +26,33 @@
         </p>
       </div>
     </div>
+
+    <Accordion
+      v-for="(item, index) in list"
+      :key="item.id"
+      :item="item"
+      :active-index="currentlyActiveIndex"
+      :item-index="index"
+      @update:itemIndex="currentlyActiveIndex = $event"
+    ></Accordion>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "nuxt-property-decorator";
 import AlertBox from "~/components/common/alert-box.vue";
+import Accordion from "../components/common/accordion.vue";
 
 @Component({
-  components: { AlertBox },
+  components: { AlertBox, Accordion },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  list = [
+    { id: 1, name: "hello" },
+    { id: 2, name: "world" },
+    { id: 3, name: "swag" },
+  ];
+
+  currentlyActiveIndex = null;
+}
 </script>
